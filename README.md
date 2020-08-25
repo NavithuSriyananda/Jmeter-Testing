@@ -1,12 +1,14 @@
 # Jmeter-Testing
 
-Distributed node testing with jmeter
+## Distributed node testing with jmeter
 
 ## Tools Used
 
 - apache-jmeter-5.3
 - openjdk-8-jdk
 - docker
+
+---
 
 ## Run containers from images
 
@@ -28,10 +30,12 @@ docker run -dit -e PublicIP='52.10.0.2' -p 1099:1099 -p 50000:50000 navithu/slav
 docker run -dit -e PublicIP='52.10.0.3' -p 1099:1099 -p 50000:50000 navithu/slave /bin/bash
 ```
 
+---
+
 ## Testing with distributed nodes
 
 ### EC2-01 - Master
 
-```sh
+```bash
 jmeter -n -t test.jmx -Djava.rmi.server.hostname=52.10.0.1 -Dclient.rmi.localport=60000 -R52.10.0.2,52.10.0.3
 ```
