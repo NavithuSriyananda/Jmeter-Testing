@@ -1,11 +1,12 @@
-# Use base image
+# Use vinsdocker base image
 FROM navithu/base
 
 # Ports to be exposed from the container for JMeter Slaves/Server
 EXPOSE 1099 50000
 
+COPY entrypoint.sh /
+
+RUN chmod +x ./entrypoint.sh
+
 # Application to run on starting the container
-ENTRYPOINT $JMETER_HOME/bin/jmeter-server \
-    -Dserver.rmi.localport=50000 \
-    -Dserver_port=1099 \
-    -Jserver.rmi.ssl.disable=true 
+ENTRYPOINT ["/entrypoint.sh"]

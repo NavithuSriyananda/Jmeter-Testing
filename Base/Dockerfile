@@ -1,30 +1,27 @@
-# Alpine - lighweight linux distro
-FROM alpine
+# Use Java 8 slim JRE
+FROM openjdk:8-jre-slim
 
-# install packages
-RUN apk update && \
-    apk add wget \
-    busybox-extras \
-    iputils \
+# JMeter version
+ARG JMETER_VERSION=3.3
+
+# Install few utilities
+RUN apt-get clean && \
+    apt-get update && \
+    apt-get -qy install \
+    wget \
+    telnet \
+    iputils-ping \
     unzip
 
-# Install OpenJDK-8
-RUN apk add openjdk8 && \
-    apk add apache-ant
-
-# Install Jmeter & plugins
-RUN mkdir /jmeter \
+# Install JMeter
+RUN   mkdir /jmeter \
     && cd /jmeter/ \
-    && wget https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.3.tgz \
-    && tar -xzf apache-jmeter-5.3.tgz \
-    && rm apache-jmeter-5.3.tgz \
-    && mkdir /jmeter-plugins \
-    && cd /jmeter-plugins/ \
-    && wget https://jmeter-plugins.org/downloads/file/JMeterPlugins-ExtrasLibs-1.4.0.zip \
-    && unzip -o JMeterPlugins-ExtrasLibs-1.4.0.zip -d /jmeter/apache-jmeter-5.3/
+    && wget https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-$JMETER_VERSION.tgz \
+    && tar -xzf apache-jmeter-$JMETER_VERSION.tgz \
+    && rm apache-jmeter-$JMETER_VERSION.tgz
 
-# Set Jmeter Home
-ENV JMETER_HOME /jmeter/apache-jmeter-5.3/
+# Set JMeter Home
+ENV JMETER_HOME /jmeter/apache-jmeter-$JMETER_VERSION/
 
-# Add Jmeter to the Path
+# Add JMeter to the Path
 ENV PATH $JMETER_HOME/bin:$PATH
