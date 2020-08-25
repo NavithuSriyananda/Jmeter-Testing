@@ -32,6 +32,6 @@ docker run -dit -e PublicIP='52.10.0.3' -p 1099:1099 -p 50000:50000 navithu/slav
 
 ### EC2-01 - Master
 
-```bash
+```sh
 jmeter -n -t test.jmx -Djava.rmi.server.hostname=52.10.0.1 -Dclient.rmi.localport=60000 -R52.10.0.2,52.10.0.3
 ```
