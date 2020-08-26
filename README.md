@@ -32,7 +32,7 @@
 |         Description          |               Command                |
 | :--------------------------: | :----------------------------------: |
 |      Login to dockerhub      |            `docker login`            |
-| Set docker socket permission | `sudo chmod +x /var/run/docker.sock` |
+| Set docker socket permission | `sudo chmod 777 /var/run/docker.sock` |
 |         System reset         |       `docker system prune -a`       |
 |  Create test file and save   |    `cat > test.jmx > sample text`    |
 
