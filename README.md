@@ -41,7 +41,7 @@
 ## Tools Used
 
 - apache-jmeter-5.3
-- openjdk-8-jdk
+- openjdk-8
 - docker
 
 ## File Structure
