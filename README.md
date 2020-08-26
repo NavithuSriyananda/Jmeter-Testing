@@ -2,7 +2,7 @@
 
 ## -Docker cheatsheet-
 
-### Images
+### -Images-
 
 |       Description        |                  Command                   |
 | :----------------------: | :----------------------------------------: |
@@ -14,7 +14,7 @@
 |          Remove          |        `docker rmi navithu/MyImage`        |
 |        Remove all        |          `docker image prune -a`           |
 
-### Containers
+### -Containers-
 
 | Description |                            Command                             |
 | :---------: | :------------------------------------------------------------: |
@@ -25,7 +25,7 @@
 |   Remove    |                    `docker rm MyContainer`                     |
 | Remove all  |                    `docker container prune`                    |
 
-### Global
+### -Global-
 
 |      Description       |            Command             |
 | :--------------------: | :----------------------------: |
@@ -41,7 +41,7 @@
 - openjdk-8-jdk
 - docker
 
-### Struncture
+## Structure
 
 |       File        |                                                   Description                                                   |
 | :---------------: | :-------------------------------------------------------------------------------------------------------------: |
