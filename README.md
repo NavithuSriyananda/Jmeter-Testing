@@ -6,21 +6,31 @@
 
 |       Description        |                  Command                   |
 | :----------------------: | :----------------------------------------: |
-| **build** image and tag  | `docker build -t navithu/MyImage:latest .` |
-|  **push** to dockerhub   |   `docker push navithu/MyImage:latest .`   |
-| **pull** from docker hub |   `docker pull navithu/MyImage:latest .`   |
-|         view all         |              `docker images`               |
+| **Build** image and tag  | `docker build -t navithu/MyImage:latest .` |
+|  **Push** to dockerhub   |   `docker push navithu/MyImage:latest .`   |
+| **Pull** from docker hub |   `docker pull navithu/MyImage:latest .`   |
+|         View all         |              `docker images`               |
 |           Tag            |    `docker tag 123456 navithu/MyImage`     |
 |          Remove          |        `docker rmi navithu/MyImage`        |
 |        Remove all        |          `docker image prune -a`           |
 
 ### Containers
 
-|          Description           |                  Command                   |
-| :----------------------------: | :----------------------------------------: |
-|    **build** image and tag     | `docker build -t navithu/MyImage:latest .` |
-|  **push** image to dockerhub   |   `docker push navithu/MyImage:latest .`   |
-| **pull** image from docker hub |   `docker pull navithu/MyImage:latest .`   |
+| Description |                            Command                             |
+| :---------: | :------------------------------------------------------------: |
+|  View all   |                         `docker ps -a`                         |
+|     Run     | `docker run -dit --name MyContainer navithu/MyImage /bin/bash` |
+|    Start    |                   `docker start MyContainer`                   |
+|    Stop     |                   `docker stop MyContainer`                    |
+|   Remove    |                         `docker ps -a`                         |
+| Remove all  |                    `docker container prune`                    |
+
+### Global
+
+|    Description     |         Command          |
+| :----------------: | :----------------------: |
+| Login to dockerhub |      `docker login`      |
+|    System reset    | `docker system prune -a` |
 
 ---
 
