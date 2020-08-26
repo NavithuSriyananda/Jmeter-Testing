@@ -43,12 +43,12 @@
 
 ### Struncture
 
-|       File        |                                 Description                                 |
-| :---------------: | :-------------------------------------------------------------------------: |
-| Jmeter base image |    This image is used as the foundation for both master and slave images    |
-|   Master image    |  This image is used to run master container. It populates with base image.  |
-|    Slave image    |  This image is used to run slave container. It populates with base image.   |
-|   entrypoint.sh   | This script file used to configure jmeter in a slave(with server public IP) |
+|       File        |                                                   Description                                                   |
+| :---------------: | :-------------------------------------------------------------------------------------------------------------: |
+| Jmeter base image |                      This image is used as the foundation for both master and slave images                      |
+|   Master image    |                    This image is used to run master container. It populates with base image.                    |
+|    Slave image    |                    This image is used to run slave container. It populates with base image.                     |
+|   entrypoint.sh   | This script file used to configure jmeter in a slave(with server public IP). This execute when container starts |
 
 ---
 
