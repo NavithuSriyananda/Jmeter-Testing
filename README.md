@@ -9,7 +9,6 @@
 | **build** image and tag  | `docker build -t navithu/MyImage:latest .` |
 |  **push** to dockerhub   |   `docker push navithu/MyImage:latest .`   |
 | **pull** from docker hub |   `docker pull navithu/MyImage:latest .`   |
-|                          |                                            |
 |         view all         |              `docker images`               |
 |           Tag            |    `docker tag 123456 navithu/MyImage`     |
 |          Remove          |        `docker rmi navithu/MyImage`        |
