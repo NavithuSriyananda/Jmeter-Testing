@@ -22,7 +22,7 @@
 |    Start    |                   `docker start MyContainer`                   |
 |    Stop     |                   `docker stop MyContainer`                    |
 |  View all   |                         `docker ps -a`                         |
-|   Remove    |                         `docker ps -a`                         |
+|   Remove    |                    `docker rm MyContainer`                     |
 | Remove all  |                    `docker container prune`                    |
 
 ### Global
