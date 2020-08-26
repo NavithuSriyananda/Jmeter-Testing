@@ -27,10 +27,11 @@
 
 ### Global
 
-|    Description     |         Command          |
-| :----------------: | :----------------------: |
-| Login to dockerhub |      `docker login`      |
-|    System reset    | `docker system prune -a` |
+|      Description       |            Command             |
+| :--------------------: | :----------------------------: |
+|   Login to dockerhub   |         `docker login`         |
+|      System reset      |    `docker system prune -a`    |
+| Create a file and save | `cat > test.jmx > sample text` |
 
 ---
 
