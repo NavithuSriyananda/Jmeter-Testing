@@ -18,10 +18,10 @@
 
 | Description |                            Command                             |
 | :---------: | :------------------------------------------------------------: |
-|  View all   |                         `docker ps -a`                         |
 |     Run     | `docker run -dit --name MyContainer navithu/MyImage /bin/bash` |
 |    Start    |                   `docker start MyContainer`                   |
 |    Stop     |                   `docker stop MyContainer`                    |
+|  View all   |                         `docker ps -a`                         |
 |   Remove    |                         `docker ps -a`                         |
 | Remove all  |                    `docker container prune`                    |
 
