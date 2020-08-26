@@ -27,11 +27,12 @@
 
 ### -Global-
 
-|      Description       |            Command             |
-| :--------------------: | :----------------------------: |
-|   Login to dockerhub   |         `docker login`         |
-|      System reset      |    `docker system prune -a`    |
-| Create a file and save | `cat > test.jmx > sample text` |
+|         Description          |               Command                |
+| :--------------------------: | :----------------------------------: |
+|      Login to dockerhub      |            `docker login`            |
+| Set docker socket permission | `sudo chmod +x /var/run/docker.sock` |
+|         System reset         |       `docker system prune -a`       |
+|    Create a file and save    |    `cat > test.jmx > sample text`    |
 
 ---
 
