@@ -4,9 +4,9 @@
 
 ### -Images-
 
-build image and tag --> ```sh docker build -t navithu/MyImage:latest .```</br>
-push image to dockerhub --> `bash docker push navithu/MyImage:latest .`</br>
-Pull image from docker hub --> `bash docker pull navithu/MyImage:latest .`
+build image and tag --> ` docker build -t navithu/MyImage:latest .`</br>
+push image to dockerhub --> ` docker push navithu/MyImage:latest .`</br>
+Pull image from docker hub --> `docker pull navithu/MyImage:latest .`
 
 ### -Containers-
 
