@@ -1,4 +1,4 @@
-# Jmeter-Testing
+# Jmeter-Testing with Docker
 
 ---
 
@@ -60,19 +60,19 @@
 ### EC2 #01 - Master
 
 ```bash
-docker run -dit --name master -p 60000:60000 navithu/master /bin/bash
+docker run -dit --name master --network host navithu/master /bin/bash
 ```
 
 ### EC2 #02 - Slave
 
 ```bash
-docker run -dit -e PublicIP='52.10.0.2' --name slave --network host navithu/slave /bin/bash
+docker run -dit -e PublicIP='0.0.0.2' --name slave --network host navithu/slave /bin/bash
 ```
 
 ### EC2 #03 - Slave
 
 ```bash
-docker run -dit -e PublicIP='52.10.0.3' --name slave --network host navithu/slave /bin/bash
+docker run -dit -e PublicIP='0.0.0.3' --name slave --network host navithu/slave /bin/bash
 ```
 
 ---
@@ -82,18 +82,25 @@ docker run -dit -e PublicIP='52.10.0.3' --name slave --network host navithu/slav
 ### EC2-01 - Master
 
 ```bash
-jmeter -n -t test.jmx -Djava.rmi.server.hostname=52.10.0.1 -Dclient.rmi.localport=60000 -R52.10.0.2,52.10.0.3
+jmeter -n -t test.jmx -Djava.rmi.server.hostname=0.0.0.1 -Dclient.rmi.localport=60000 -R0.0.0.2,0.0.0.3
 ```
 
 ---
-#Plugin manage
+
+# Plugin Manager 
+
+## Install
 
 ### apache-jmeter-5.3/lib
 
-`wget https://repo1.maven.org/maven2/kg/apc/cmdrunner/2.2/cmdrunner-2.2.jar`
+1. `wget https://repo1.maven.org/maven2/kg/apc/cmdrunner/2.2/cmdrunner-2.2.jar`
 
 ### apache-jmeter-5.3/lib/ext 
 
-`wget https://repo1.maven.org/maven2/kg/apc/jmeter-plugins-manager/1.4/jmeter-plugins-manager-1.4.jar `
+1. `wget -O jmeter-plugins-manager-1.4.jar https://repo1.maven.org/maven2/kg/apc/jmeter-plugins-manager/1.4/jmeter-plugins-manager-1.4.jar`
 
-`java -cp jmeter-plugins-manager-1.4.jar org.jmeterplugins.repository.PluginManagerCMDInstaller`
+2. `java -cp jmeter-plugins-manager-1.4.jar org.jmeterplugins.repository.PluginManagerCMDInstaller`
+
+3. Add to path `PATH="$HOME/apache-jmeter-5.3/bin:$PATH"`
+
+##
