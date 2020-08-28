@@ -39,7 +39,7 @@ docker run -dit -e PublicIP='0.0.0.2' --name slave --network host navithu/slave 
 
 ### EC2 #03 - Slave
 
-- Public IP - 0.0.0.1
+- Public IP - 0.0.0.3
 
 ```bash
 docker run -dit -e PublicIP='0.0.0.3' --name slave --network host navithu/slave /bin/bash
