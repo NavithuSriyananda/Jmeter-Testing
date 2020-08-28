@@ -57,22 +57,22 @@
 
 ## Run containers from images
 
-### EC2-01 - Master
+### EC2 #01 - Master
 
 ```bash
 docker run -dit --name master -p 60000:60000 navithu/master /bin/bash
 ```
 
-### EC2-02 - Slave
+### EC2 #02 - Slave
 
 ```bash
-docker run -dit -e PublicIP='52.10.0.2' -p 1099:1099 -p 50000:50000 navithu/slave /bin/bash
+docker run -dit -e PublicIP='52.10.0.2' --name slave --network host navithu/slave /bin/bash
 ```
 
-### EC2-03 - Slave
+### EC2 #03 - Slave
 
 ```bash
-docker run -dit -e PublicIP='52.10.0.3' -p 1099:1099 -p 50000:50000 navithu/slave /bin/bash
+docker run -dit -e PublicIP='52.10.0.3' --name slave --network host navithu/slave /bin/bash
 ```
 
 ---
