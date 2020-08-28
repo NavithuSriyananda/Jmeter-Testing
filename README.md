@@ -88,6 +88,12 @@ jmeter -n -t test.jmx -Djava.rmi.server.hostname=52.10.0.1 -Dclient.rmi.localpor
 ---
 #Plugin manage
 
-apache-jmeter-5.3/lib `wget -c http://search.maven.org/remotecontent?filepath=kg/apc/cmdrunner/2.0/cmdrunner-2.0.jar -o cmdrunner-2.0.jar`
+### apache-jmeter-5.3/lib
 
-apache-jmeter-5.3/lib/ext `wget -c https://repo1.maven.org/maven2/kg/apc/jmeter-plugins-manager/1.4/jmeter-plugins-manager-1.4.jar -o jmeter-plugins-manager-1.4.jar `
+`wget -c http://search.maven.org/remotecontent?filepath=kg/apc/cmdrunner/2.0/cmdrunner-2.0.jar -o cmdrunner-2.0.jar`
+
+### apache-jmeter-5.3/lib/ext 
+
+`wget -c https://repo1.maven.org/maven2/kg/apc/jmeter-plugins-manager/1.4/jmeter-plugins-manager-1.4.jar -o jmeter-plugins-manager-1.4.jar `
+
+`java -cp jmeter-plugins-manager-1.4.jar org.jmeterplugins.repository.PluginManagerCMDInstaller`
