@@ -95,7 +95,7 @@ PluginsManagerCMD.sh install-for-jmx /home/username/jmx/testPlan.jmx
 
 ---
 
-## -Docker cheatsheet-
+# -Docker cheatsheet-
 
 ### -Images-
 
