@@ -1,6 +1,6 @@
 # Jmeter-Testing with Docker
 
-Example for 3 EC2 instances
+
 
 ---
 
@@ -99,11 +99,11 @@ jmeter -n -t test.jmx -Djava.rmi.server.hostname=0.0.0.1 -Dclient.rmi.localport=
 
 ## Install
 
- - ### ..apache-jmeter-5.3/lib>
+### ..apache-jmeter-5.3/lib>
 
 1. `wget https://repo1.maven.org/maven2/kg/apc/cmdrunner/2.2/cmdrunner-2.2.jar`
 
- - ### ..apache-jmeter-5.3/lib/ext>
+### ..apache-jmeter-5.3/lib/ext>
 
 1. `wget -O jmeter-plugins-manager-1.4.jar https://repo1.maven.org/maven2/kg/apc/jmeter-plugins-manager/1.4/jmeter-plugins-manager-1.4.jar`
 
