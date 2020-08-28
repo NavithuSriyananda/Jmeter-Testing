@@ -2,41 +2,6 @@
 
 
 
----
-
-## -Docker cheatsheet-
-
-### -Images-
-
-|       Description        |                  Command                   |
-| :----------------------: | :----------------------------------------: |
-| **Build** image and tag  | `docker build -t navithu/MyImage:latest .` |
-|  **Push** to dockerhub   |   `docker push navithu/MyImage:latest .`   |
-| **Pull** from docker hub |   `docker pull navithu/MyImage:latest .`   |
-|         View all         |              `docker images`               |
-|           Tag            |    `docker tag 123456 navithu/MyImage`     |
-|          Remove          |        `docker rmi navithu/MyImage`        |
-|        Remove all        |          `docker image prune -a`           |
-
-### -Containers-
-
-| Description |                            Command                             |
-| :---------: | :------------------------------------------------------------: |
-|     Run     | `docker run -dit --name MyContainer navithu/MyImage /bin/bash` |
-|    Start    |                   `docker start MyContainer`                   |
-|    Stop     |                   `docker stop MyContainer`                    |
-|  View all   |                         `docker ps -a`                         |
-|   Remove    |                    `docker rm MyContainer`                     |
-| Remove all  |                    `docker container prune`                    |
-
-### -Global-
-
-|         Description          |               Command                |
-| :--------------------------: | :----------------------------------: |
-|      Login to dockerhub      |            `docker login`            |
-| Set docker socket permission | `sudo chmod 777 /var/run/docker.sock` |
-|         System reset         |       `docker system prune -a`       |
-|  Create test file and save   |    `cat > test.jmx > sample text`    |
 
 ---
 
@@ -130,4 +95,40 @@ PluginsManagerCMD.sh uninstall jmeter-tcp,jmeter-ftp,jmeter-jdbc
 
 PluginsManagerCMD.sh install-for-jmx /home/username/jmx/testPlan.jmx
 ````
+
+---
+
+## -Docker cheatsheet-
+
+### -Images-
+
+|       Description        |                  Command                   |
+| :----------------------: | :----------------------------------------: |
+| **Build** image and tag  | `docker build -t navithu/MyImage:latest .` |
+|  **Push** to dockerhub   |   `docker push navithu/MyImage:latest .`   |
+| **Pull** from docker hub |   `docker pull navithu/MyImage:latest .`   |
+|         View all         |              `docker images`               |
+|           Tag            |    `docker tag 123456 navithu/MyImage`     |
+|          Remove          |        `docker rmi navithu/MyImage`        |
+|        Remove all        |          `docker image prune -a`           |
+
+### -Containers-
+
+| Description |                            Command                             |
+| :---------: | :------------------------------------------------------------: |
+|     Run     | `docker run -dit --name MyContainer navithu/MyImage /bin/bash` |
+|    Start    |                   `docker start MyContainer`                   |
+|    Stop     |                   `docker stop MyContainer`                    |
+|  View all   |                         `docker ps -a`                         |
+|   Remove    |                    `docker rm MyContainer`                     |
+| Remove all  |                    `docker container prune`                    |
+
+### -Global-
+
+|         Description          |               Command                |
+| :--------------------------: | :----------------------------------: |
+|      Login to dockerhub      |            `docker login`            |
+| Set docker socket permission | `sudo chmod 777 /var/run/docker.sock` |
+|         System reset         |       `docker system prune -a`       |
+|  Create test file and save   |    `cat > test.jmx > sample text`    |
 
