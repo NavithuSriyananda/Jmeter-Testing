@@ -1,5 +1,7 @@
 # Jmeter-Testing with Docker
 
+Example for 3 EC2 instances
+
 ---
 
 ## -Docker cheatsheet-
@@ -111,7 +113,7 @@ jmeter -n -t test.jmx -Djava.rmi.server.hostname=0.0.0.1 -Dclient.rmi.localport=
 
 ## Sample commands
 
-`
+```
 PluginsManagerCMD.sh help
 
 PluginsManagerCMD.sh status
@@ -127,5 +129,5 @@ PluginsManagerCMD.sh install-all-except jpgc-casutg,jpgc-autostop
 PluginsManagerCMD.sh uninstall jmeter-tcp,jmeter-ftp,jmeter-jdbc
 
 PluginsManagerCMD.sh install-for-jmx /home/username/jmx/testPlan.jmx
-`
+````
 
