@@ -97,11 +97,11 @@ jmeter -n -t test.jmx -Djava.rmi.server.hostname=0.0.0.1 -Dclient.rmi.localport=
 
 ## Install
 
-### ..apache-jmeter-5.3/lib>
+ - ### ..apache-jmeter-5.3/lib>
 
 1. `wget https://repo1.maven.org/maven2/kg/apc/cmdrunner/2.2/cmdrunner-2.2.jar`
 
-### ..apache-jmeter-5.3/lib/ext>
+ - ### ..apache-jmeter-5.3/lib/ext>
 
 1. `wget -O jmeter-plugins-manager-1.4.jar https://repo1.maven.org/maven2/kg/apc/jmeter-plugins-manager/1.4/jmeter-plugins-manager-1.4.jar`
 
@@ -110,14 +110,22 @@ jmeter -n -t test.jmx -Djava.rmi.server.hostname=0.0.0.1 -Dclient.rmi.localport=
 3. Add to path `PATH="$PATH:$HOME/jmeter/apache-jmeter-5.3/bin/PluginsManagerCMD.sh"`
 
 ## Sample commands
+
 `
 PluginsManagerCMD.sh help
+
 PluginsManagerCMD.sh status
+
 PluginsManagerCMD.sh upgrades
+
 PluginsManagerCMD.sh available
+
 PluginsManagerCMD.sh install jpgc-fifo,jpgc-json=2.2
+
 PluginsManagerCMD.sh install-all-except jpgc-casutg,jpgc-autostop
+
 PluginsManagerCMD.sh uninstall jmeter-tcp,jmeter-ftp,jmeter-jdbc
+
 PluginsManagerCMD.sh install-for-jmx /home/username/jmx/testPlan.jmx
 `
 
