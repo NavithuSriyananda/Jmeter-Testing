@@ -1,8 +1,5 @@
 # Jmeter-Testing with Docker
 
-
-
-
 ---
 
 ## Tools Used
@@ -13,12 +10,12 @@
 
 ## File Structure
 
-|       File        |                                                   Description                                                   |
-| :---------------: | :-------------------------------------------------------------------------------------------------------------: |
-| Jmeter base image |                      This image is used as the foundation for both master and slave images                      |
-|   Master image    |                    This image is used to run master container. It populates with base image.                    |
-|    Slave image    |                    This image is used to run slave container. It populates with base image.                     |
-|   entrypoint.sh   | This script file used to configure jmeter in a slave(with server public IP). This execute when container starts |
+|       File        |                                                   Description                                                    |
+| :---------------: | :--------------------------------------------------------------------------------------------------------------: |
+| Jmeter base image |                             used as the foundation for both master and slave images                              |
+|   Master image    |                           used to run master container. It populates with base image.                            |
+|    Slave image    |                            used to run slave container. It populates with base image.                            |
+|   entrypoint.sh   | This script file used to configure jmeter in a slave(with server public IP). This executes when container starts |
 
 ---
 
@@ -26,7 +23,7 @@
 
 ### EC2 #01 - Master
 
- - Public IP - 0.0.0.1
+- Public IP - 0.0.0.1
 
 ```bash
 docker run -dit --name master --network host navithu/master /bin/bash
@@ -34,7 +31,7 @@ docker run -dit --name master --network host navithu/master /bin/bash
 
 ### EC2 #02 - Slave
 
- - Public IP - 0.0.0.2
+- Public IP - 0.0.0.2
 
 ```bash
 docker run -dit -e PublicIP='0.0.0.2' --name slave --network host navithu/slave /bin/bash
@@ -42,7 +39,7 @@ docker run -dit -e PublicIP='0.0.0.2' --name slave --network host navithu/slave 
 
 ### EC2 #03 - Slave
 
- - Public IP - 0.0.0.1
+- Public IP - 0.0.0.1
 
 ```bash
 docker run -dit -e PublicIP='0.0.0.3' --name slave --network host navithu/slave /bin/bash
@@ -60,7 +57,7 @@ jmeter -n -t test.jmx -Djava.rmi.server.hostname=0.0.0.1 -Dclient.rmi.localport=
 
 ---
 
-# Plugin Manager 
+# Plugin Manager
 
 ## Install
 
@@ -94,7 +91,7 @@ PluginsManagerCMD.sh install-all-except jpgc-casutg,jpgc-autostop
 PluginsManagerCMD.sh uninstall jmeter-tcp,jmeter-ftp,jmeter-jdbc
 
 PluginsManagerCMD.sh install-for-jmx /home/username/jmx/testPlan.jmx
-````
+```
 
 ---
 
@@ -125,10 +122,9 @@ PluginsManagerCMD.sh install-for-jmx /home/username/jmx/testPlan.jmx
 
 ### -Global-
 
-|         Description          |               Command                |
-| :--------------------------: | :----------------------------------: |
-|      Login to dockerhub      |            `docker login`            |
+|         Description          |                Command                |
+| :--------------------------: | :-----------------------------------: |
+|      Login to dockerhub      |            `docker login`             |
 | Set docker socket permission | `sudo chmod 777 /var/run/docker.sock` |
-|         System reset         |       `docker system prune -a`       |
-|  Create test file and save   |    `cat > test.jmx > sample text`    |
-
+|         System reset         |       `docker system prune -a`        |
+|  Create test file and save   |    `cat > test.jmx > sample text`     |
