@@ -28,7 +28,10 @@
 ## 3. Run containers from images
 
 - ### EC2 #1 - Master 
-  ` docker run -dit --name master --network host navithu/master /bin/bash `
+ 
+  ```bash
+  docker run -dit --name master --network host navithu/master /bin/bash 
+  ```
 
  - ### EC2 #2 - Slave
 
