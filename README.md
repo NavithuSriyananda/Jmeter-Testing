@@ -82,7 +82,7 @@
 
     **Add 'Aggregate Report' to test.jmx file and define the save location**
 
-    ![Export the report](https://raw.githubusercontent.com/NavithuSriyananda/Jmeter-Testing/master/reportExport.png)
+    ![Export-the-report](https://raw.githubusercontent.com/NavithuSriyananda/Jmeter-Testing/master/reportExport.png)
 
 ---
 
