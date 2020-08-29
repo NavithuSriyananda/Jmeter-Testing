@@ -21,6 +21,8 @@
 
 # Getting started
 
+![EC2 Instances](https://github.com/navithu/Jmeter-Testing/blob/master/Architecture.png?raw=true)
+
 ## 1. Build images
 
 ## 2. Push images to dockerhub
@@ -61,11 +63,11 @@
 
 ## Install
 
-- ### ..apache-jmeter-5.3/lib>
+### ..apache-jmeter-5.3/lib>
 
 1. `wget https://repo1.maven.org/maven2/kg/apc/cmdrunner/2.2/cmdrunner-2.2.jar`
 
-- ### ..apache-jmeter-5.3/lib/ext>
+### ..apache-jmeter-5.3/lib/ext>
 
 1. `wget -O jmeter-plugins-manager-1.4.jar https://repo1.maven.org/maven2/kg/apc/jmeter-plugins-manager/1.4/jmeter-plugins-manager-1.4.jar`
 
