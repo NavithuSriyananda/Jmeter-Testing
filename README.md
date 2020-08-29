@@ -145,10 +145,10 @@ PluginsManagerCMD.sh install-for-jmx /home/username/jmx/testPlan.jmx
 
 ### -Global-
 
-|         Description          |                      Command                      |
-| :--------------------------: | :-----------------------------------------------: |
-|   Install docker in linux    | sudo apt-get update && sudo apt install docker.io |
-|      Login to dockerhub      |                  `docker login`                   |
-| Set docker socket permission |       `sudo chmod 777 /var/run/docker.sock`       |
-|         System reset         |             `docker system prune -a`              |
-|  Create test file and save   |          `cat > test.jmx > sample text`           |
+|         Description          |                       Command                       |
+| :--------------------------: | :-------------------------------------------------: |
+|   Install docker in linux    | `sudo apt-get update && sudo apt install docker.io` |
+|      Login to dockerhub      |                   `docker login`                    |
+| Set docker socket permission |        `sudo chmod 777 /var/run/docker.sock`        |
+|         System reset         |              `docker system prune -a`               |
+|  Create test file and save   |           `cat > test.jmx > sample text`            |
