@@ -21,7 +21,7 @@
 
 # Getting started
 
-![EC2 Instances](https://github.com/navithu/Jmeter-Testing/blob/master/Architecture.png?raw=true)
+![EC2 Instances](https://raw.githubusercontent.com/NavithuSriyananda/Jmeter-Testing/master/Architecture.png)
 
 ## 1. Build images
 
