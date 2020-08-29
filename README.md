@@ -21,9 +21,9 @@
 
 # Getting started
 
-1. Build images
+## 1. Build images
 
-2. Push images to dockerhub
+## 2. Push images to dockerhub
 
 ## 3. Run containers from images
 
