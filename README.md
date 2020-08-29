@@ -23,9 +23,9 @@
 
 ![EC2 Instances](https://raw.githubusercontent.com/NavithuSriyananda/Jmeter-Testing/master/Architecture.png)
 
-## 1. Build images
+### 1. Build images
 
-## 2. Push images to dockerhub
+### 2. Push images to dockerhub
 
 ## 3. Run containers from images
 
