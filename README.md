@@ -88,7 +88,7 @@
 
 # Plugin Manager
 
-## Install
+## 1. Install
 
 ### > /apache-jmeter-5.3/lib>
 
@@ -102,7 +102,7 @@
 
 3. Add to path `PATH="$PATH:$HOME/jmeter/apache-jmeter-5.3/bin/PluginsManagerCMD.sh"`
 
-## Sample commands
+## 2. Sample commands
 
 ```
 PluginsManagerCMD.sh help
