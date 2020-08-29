@@ -44,27 +44,27 @@
 
 - ### EC2 #1
 
-- Master
+  - Master
 
-  ```bash
-  docker run -dit --name master --network host navithu/master /bin/bash
-  ```
+    ```bash
+    docker run -dit --name master --network host navithu/master /bin/bash
+    ```
 
 - ### EC2 #2
 
-- Slave
+  - Slave
 
-  ```bash
-  docker run -dit -e PublicIP='0.0.0.2' --name slave --network host navithu/slave /bin/bash
-  ```
+    ```bash
+    docker run -dit -e PublicIP='0.0.0.2' --name slave --network host navithu/slave /bin/bash
+    ```
 
 - ### EC2 #3
 
-- Slave
+  - Slave
 
-  ```bash
-  docker run -dit -e PublicIP='0.0.0.3' --name slave --network host navithu/slave /bin/bash
-  ```
+    ```bash
+    docker run -dit -e PublicIP='0.0.0.3' --name slave --network host navithu/slave /bin/bash
+    ```
 
 ---
 
