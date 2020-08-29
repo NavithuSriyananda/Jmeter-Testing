@@ -26,7 +26,9 @@
 ## 1. Build images
 
 - Example
-  `docker build -t navithu/base .`
+  ```bash
+  docker build -t navithu/base .
+  ```
 
 ## 2. Push images to dockerhub
 
