@@ -66,6 +66,8 @@
 
 - ### EC2 #1 - Master
 
+  - execute from master container
+
   ```bash
   jmeter -n -t test.jmx -Djava.rmi.server.hostname=0.0.0.1 -Dclient.rmi.localport=60000 -R0.0.0.2,0.0.0.3
   ```
@@ -114,15 +116,15 @@ PluginsManagerCMD.sh install-for-jmx /home/username/jmx/testPlan.jmx
 
 ### -Images-
 
-|       Description        |                  Command                   |
-| :----------------------: | :----------------------------------------: |
+|       Description        |               Command               |
+| :----------------------: | :---------------------------------: |
 | **Build** image and tag  | `docker build -t navithu/MyImage .` |
 |  **Push** to dockerhub   |   `docker push navithu/MyImage .`   |
 | **Pull** from docker hub |   `docker pull navithu/MyImage .`   |
-|         View all         |              `docker images`               |
-|           Tag            |    `docker tag 123456 navithu/MyImage`     |
-|          Remove          |        `docker rmi navithu/MyImage`        |
-|        Remove all        |          `docker image prune -a`           |
+|         View all         |           `docker images`           |
+|           Tag            | `docker tag 123456 navithu/MyImage` |
+|          Remove          |    `docker rmi navithu/MyImage`     |
+|        Remove all        |       `docker image prune -a`       |
 
 ### -Containers-
 
@@ -137,9 +139,10 @@ PluginsManagerCMD.sh install-for-jmx /home/username/jmx/testPlan.jmx
 
 ### -Global-
 
-|         Description          |                Command                |
-| :--------------------------: | :-----------------------------------: |
-|      Login to dockerhub      |            `docker login`             |
-| Set docker socket permission | `sudo chmod 777 /var/run/docker.sock` |
-|         System reset         |       `docker system prune -a`        |
-|  Create test file and save   |    `cat > test.jmx > sample text`     |
+|         Description          |                      Command                      |
+| :--------------------------: | :-----------------------------------------------: |
+|   Install docker in linux    | sudo apt-get update && sudo apt install docker.io |
+|      Login to dockerhub      |                  `docker login`                   |
+| Set docker socket permission |       `sudo chmod 777 /var/run/docker.sock`       |
+|         System reset         |             `docker system prune -a`              |
+|  Create test file and save   |          `cat > test.jmx > sample text`           |
