@@ -5,7 +5,7 @@
 ## Tools Used
 
 - apache-jmeter-5.3
-- openjdk:8-jre-slim
+- openjdk-8-jdk
 - docker
 
 ## File Structure
@@ -42,19 +42,25 @@
 
 ## 3. Run containers from images
 
-- ### EC2 #1 - Master
+- ### EC2 #1
+
+- Master
 
   ```bash
   docker run -dit --name master --network host navithu/master /bin/bash
   ```
 
-- ### EC2 #2 - Slave
+- ### EC2 #2
+
+- Slave
 
   ```bash
   docker run -dit -e PublicIP='0.0.0.2' --name slave --network host navithu/slave /bin/bash
   ```
 
-- ### EC2 #3 - Slave
+- ### EC2 #3
+
+- Slave
 
   ```bash
   docker run -dit -e PublicIP='0.0.0.3' --name slave --network host navithu/slave /bin/bash
