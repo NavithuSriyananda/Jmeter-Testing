@@ -17,6 +17,9 @@
 |    Slave image    |                            used to run slave container. It populates with base image.                            |
 |   entrypoint.sh   | This script file used to configure jmeter in a slave(with server public IP). This executes when container starts |
 
+**entrypoint.sh file always need to be formatted as LF. Not CRLF**
+![note](https://raw.githubusercontent.com/NavithuSriyananda/Jmeter-Testing/master/note.png)
+
 ---
 
 # Getting started
@@ -31,6 +34,11 @@
   ```
 
 ## 2. Push images to dockerhub
+
+- Example
+  ```bash
+  docker push navithu/base
+  ```
 
 ## 3. Run containers from images
 
@@ -108,9 +116,9 @@ PluginsManagerCMD.sh install-for-jmx /home/username/jmx/testPlan.jmx
 
 |       Description        |                  Command                   |
 | :----------------------: | :----------------------------------------: |
-| **Build** image and tag  | `docker build -t navithu/MyImage:latest .` |
-|  **Push** to dockerhub   |   `docker push navithu/MyImage:latest .`   |
-| **Pull** from docker hub |   `docker pull navithu/MyImage:latest .`   |
+| **Build** image and tag  | `docker build -t navithu/MyImage .` |
+|  **Push** to dockerhub   |   `docker push navithu/MyImage .`   |
+| **Pull** from docker hub |   `docker pull navithu/MyImage .`   |
 |         View all         |              `docker images`               |
 |           Tag            |    `docker tag 123456 navithu/MyImage`     |
 |          Remove          |        `docker rmi navithu/MyImage`        |
