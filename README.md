@@ -78,6 +78,12 @@
     jmeter -n -t test.jmx -Djava.rmi.server.hostname=0.0.0.1 -Dclient.rmi.localport=60000 -R0.0.0.2,0.0.0.3
     ```
 
+  - export report
+
+    **Add 'Aggregate Report' to test.jmx file and define the save location**
+
+    ![Export the report](https://raw.githubusercontent.com/NavithuSriyananda/Jmeter-Testing/master/reportExport.png)
+
 ---
 
 # Plugin Manager
