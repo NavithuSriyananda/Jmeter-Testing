@@ -19,27 +19,27 @@
 
 ---
 
-## Run containers from images
+# Getting started
 
-### EC2 #01 - Master
+1. Build images
 
-- Public IP - 0.0.0.1
+2. Push images to dockerhub
+
+## 3. Run containers from images
+
+### EC2 #1 - Master
 
 ```bash
 docker run -dit --name master --network host navithu/master /bin/bash
 ```
 
-### EC2 #02 - Slave
-
-- Public IP - 0.0.0.2
+### EC2 #2 - Slave
 
 ```bash
 docker run -dit -e PublicIP='0.0.0.2' --name slave --network host navithu/slave /bin/bash
 ```
 
-### EC2 #03 - Slave
-
-- Public IP - 0.0.0.3
+### EC2 #3 - Slave
 
 ```bash
 docker run -dit -e PublicIP='0.0.0.3' --name slave --network host navithu/slave /bin/bash
@@ -47,9 +47,9 @@ docker run -dit -e PublicIP='0.0.0.3' --name slave --network host navithu/slave 
 
 ---
 
-## Testing with distributed nodes
+## 4. Testing with distributed nodes
 
-### EC2-01 - Master
+### EC2 #1 - Master
 
 ```bash
 jmeter -n -t test.jmx -Djava.rmi.server.hostname=0.0.0.1 -Dclient.rmi.localport=60000 -R0.0.0.2,0.0.0.3
