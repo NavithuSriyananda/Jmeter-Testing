@@ -145,6 +145,7 @@ PluginsManagerCMD.sh install-for-jmx /home/username/jmx/testPlan.jmx
 |     Run     | `docker run -dit --name MyContainer navithu/MyImage /bin/bash` |
 |    Start    |                   `docker start MyContainer`                   |
 |    Stop     |                   `docker stop MyContainer`                    |
+|    Exec     |            `docker exec -it MyContainer /bin/bash`             |
 |  View all   |                         `docker ps -a`                         |
 |   Remove    |                    `docker rm MyContainer`                     |
 | Remove all  |                    `docker container prune`                    |
