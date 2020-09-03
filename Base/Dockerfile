@@ -36,9 +36,9 @@ RUN cd $JMETER_HOME/lib/ \
 # Add Plugin-Manager to the Path
 ENV PATH $JMETER_HOME/bin/PluginsManagerCMD.sh:$PATH
 
-# Intall plugins
+# Install plugins
 # 3 Basic Graphs
-RUN PluginsManagerCMD.sh install jpgc-graphs-basic
+RUN PluginsManagerCMD.sh install jpgc-graphs-basic 2.0
 # 5 Additional Graphs
 RUN  PluginsManagerCMD.sh install jpgc-graphs-additional
 # Custom JMeter Functions
