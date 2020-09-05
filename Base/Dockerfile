@@ -1,30 +1,39 @@
-# Use Alpine
-FROM alpine
+# Use Ubuntu
+FROM ubuntu
 
 # Install wger & JRE
-RUN apk update && \
-	apk add \
+RUN apt-get clean && \
+	apt-get update && \
+	apt-get -qy install \
 	wget \
-	openjdk8-jre \
-	iputils \
+	default-jre-headless \
+	telnet \
+	iputils-ping \
 	unzip
 
 # Install OpenJDK-8
-RUN apk update && \
-	apk add openjdk8
+RUN apt-get install -y openjdk-8-jdk && \
+	apt-get install -y ant && \
+	apt-get clean
 
 # Install jmeter
 RUN   mkdir /jmeter \
 	&& cd /jmeter/ \
 	&& wget https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.3.tgz \
 	&& tar -xzf apache-jmeter-5.3.tgz \
-	&& rm apache-jmeter-5.3.tgz 
+	&& rm apache-jmeter-5.3.tgz
 
 # Set Jmeter Home
 ENV JMETER_HOME /jmeter/apache-jmeter-5.3/
 
+# Set default values for allocation of system resources (memory) which will be used by JMeter
+ENV Xms 256m
+ENV Xmx 512m
+ENV MaxMetaspaceSize 1024m
+ENV JMETER_BIN $JMETER_HOME/bin
+
 # Add Jmeter to the Path
-ENV PATH $JMETER_HOME/bin:$PATH
+ENV PATH $JMETER_BIN:$PATH
 
 # Install Plugin-Manager
 RUN cd $JMETER_HOME/lib/ \
@@ -34,7 +43,7 @@ RUN cd $JMETER_HOME/lib/ \
 	&& java -cp jmeter-plugins-manager-1.4.jar org.jmeterplugins.repository.PluginManagerCMDInstaller
 
 # Add Plugin-Manager to the Path
-ENV PATH $JMETER_HOME/bin/PluginsManagerCMD.sh:$PATH
+ENV PATH $JMETER_BIN/PluginsManagerCMD.sh:$PATH
 
 # Install plugins
 # 3 Basic Graphs
