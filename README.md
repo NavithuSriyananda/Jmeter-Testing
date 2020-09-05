@@ -75,7 +75,7 @@
   - execute from master container
 
     ```bash
-    jmeter -n -t test.jmx -Djava.rmi.server.hostname=0.0.0.1 -Dclient.rmi.localport=60000 -R0.0.0.2,0.0.0.3
+    jmeter -n -t test.jmx -Djava.rmi.server.hostname=0.0.0.1 -Dclient.rmi.localport=60000 -Jserver.rmi.ssl.disable=true -R0.0.0.2,0.0.0.3
     ```
 
   - export report
@@ -140,15 +140,15 @@ PluginsManagerCMD.sh install-for-jmx /home/username/jmx/testPlan.jmx
 
 ### -Containers-
 
-| Description |                            Command                             |
-| :---------: | :------------------------------------------------------------: |
-|     Run     | `docker run -dit --name MyContainer navithu/MyImage /bin/bash` |
-|    Start    |                   `docker start MyContainer`                   |
-|    Stop     |                   `docker stop MyContainer`                    |
-|    Exec     |            `docker exec -it MyContainer /bin/bash`             |
-|  View all   |                         `docker ps -a`                         |
-|   Remove    |                    `docker rm MyContainer`                     |
-| Remove all  |                    `docker container prune`                    |
+|   Description    |                            Command                             |
+| :--------------: | :------------------------------------------------------------: |
+|       Run        | `docker run -dit --name MyContainer navithu/MyImage /bin/bash` |
+|      Start       |                   `docker start MyContainer`                   |
+|       Stop       |                   `docker stop MyContainer`                    |
+| Access Container |            `docker exec -it MyContainer /bin/bash`             |
+|     View all     |                         `docker ps -a`                         |
+|      Remove      |                    `docker rm MyContainer`                     |
+|    Remove all    |                    `docker container prune`                    |
 
 ### -Global-
 
