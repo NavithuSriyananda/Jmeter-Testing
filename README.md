@@ -10,12 +10,12 @@
 
 ## File Structure
 
-|       File        |                                                   Description                                                    |
-| :---------------: | :--------------------------------------------------------------------------------------------------------------: |
-| Jmeter base image |                             used as the foundation for both master and slave images                              |
-|   Master image    |                           used to run master container. It populates with base image.                            |
-|    Slave image    |                            used to run slave container. It populates with base image.                            |
-|   entrypoint.sh   | This script file used to configure jmeter in a slave(with server public IP). This executes when container starts |
+|       File        |                                                                     Description                                                                      |
+| :---------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------: |
+| Jmeter base image |                                               used as the foundation for both master and slave images                                                |
+|   Master image    |                                             used to run master container. It populates with base image.                                              |
+|    Slave image    |                                              used to run slave container. It populates with base image.                                              |
+|   entrypoint.sh   | This script file used to configure heap size of JVM to run jmeter. Also configure slaves(with server public IP). This executes when container starts |
 
 **entrypoint.sh file always need to be formatted as LF. Not CRLF**
 ![note](https://raw.githubusercontent.com/NavithuSriyananda/Jmeter-Testing/master/note.png)
@@ -126,6 +126,16 @@ PluginsManagerCMD.sh install-for-jmx /home/username/jmx/testPlan.jmx
 
 # -Docker cheatsheet-
 
+### -Global-
+
+|         Description          |                       Command                       |
+| :--------------------------: | :-------------------------------------------------: |
+|   Install docker in linux    | `sudo apt-get update && sudo apt install docker.io` |
+|      Login to dockerhub      |                   `docker login`                    |
+| Set docker socket permission |        `sudo chmod 777 /var/run/docker.sock`        |
+|         System reset         |              `docker system prune -a`               |
+|  Create test file and save   |           `cat > test.jmx > sample text`            |
+
 ### -Images-
 
 |       Description        |               Command               |
@@ -149,13 +159,3 @@ PluginsManagerCMD.sh install-for-jmx /home/username/jmx/testPlan.jmx
 |     View all     |                         `docker ps -a`                         |
 |      Remove      |                    `docker rm MyContainer`                     |
 |    Remove all    |                    `docker container prune`                    |
-
-### -Global-
-
-|         Description          |                       Command                       |
-| :--------------------------: | :-------------------------------------------------: |
-|   Install docker in linux    | `sudo apt-get update && sudo apt install docker.io` |
-|      Login to dockerhub      |                   `docker login`                    |
-| Set docker socket permission |        `sudo chmod 777 /var/run/docker.sock`        |
-|         System reset         |              `docker system prune -a`               |
-|  Create test file and save   |           `cat > test.jmx > sample text`            |
