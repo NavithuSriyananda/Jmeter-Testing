@@ -13,7 +13,10 @@ RUN apt-get clean && \
 
 # Install OpenJDK-8
 RUN apt-get install -y openjdk-8-jdk && \
-	apt-get install -y ant && \
+	apt-get install -y ant
+
+# Install dos2unix
+RUN apt-get install dos2unix && \
 	apt-get clean
 
 # Install jmeter
@@ -26,10 +29,6 @@ RUN   mkdir /jmeter \
 # Set Jmeter Home
 ENV JMETER_HOME /jmeter/apache-jmeter-5.3/
 
-# Set default values for allocation of system resources (memory) which will be used by JMeter
-ENV Xms 256m
-ENV Xmx 512m
-ENV MaxMetaspaceSize 1024m
 ENV JMETER_BIN $JMETER_HOME/bin
 
 # Add Jmeter to the Path
