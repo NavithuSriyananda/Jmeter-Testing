@@ -3,8 +3,6 @@ FROM navithu/base
 
 ENV p1 1099
 ENV p2 50000
-# Ports to be exposed from the container for JMeter Slaves/Server
-EXPOSE ${p1} ${p2}
 
 # Set default values for allocation of system resources (memory) which will be used by JMeter
 # xmn - Minimum java heap size.
