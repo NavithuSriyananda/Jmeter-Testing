@@ -30,3 +30,13 @@ ENV JMETER_BIN $JMETER_HOME/bin
 
 # Add Jmeter to the Path
 ENV PATH $JMETER_BIN:$PATH
+
+# Install Plugin-Manager
+RUN cd $JMETER_HOME/lib/ \
+	&& wget https://repo1.maven.org/maven2/kg/apc/cmdrunner/2.2/cmdrunner-2.2.jar \
+	&& cd $JMETER_HOME/lib/ext \
+	&& wget -O jmeter-plugins-manager-1.4.jar https://repo1.maven.org/maven2/kg/apc/jmeter-plugins-manager/1.4/jmeter-plugins-manager-1.4.jar \
+	&& java -cp jmeter-plugins-manager-1.4.jar org.jmeterplugins.repository.PluginManagerCMDInstaller
+
+# Add Plugin-Manager to the Path
+ENV PATH $JMETER_BIN/PluginsManagerCMD.sh:$PATH

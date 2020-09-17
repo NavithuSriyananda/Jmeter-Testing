@@ -44,7 +44,7 @@ RUN cd $JMETER_HOME/lib/ \
 # Add Plugin-Manager to the Path
 ENV PATH $JMETER_BIN/PluginsManagerCMD.sh:$PATH
 
-# Install plugins
+# Install 22 plugins
 # 3 Basic Graphs
 RUN PluginsManagerCMD.sh install jpgc-graphs-basic=2.0
 # 5 Additional Graphs
@@ -75,17 +75,17 @@ RUN  PluginsManagerCMD.sh install jmeter-jdbc
 RUN  PluginsManagerCMD.sh install jmeter-jms
 # jmeter - JUnit Support
 RUN  PluginsManagerCMD.sh install jmeter-junit
-# jmeter - Java Components
+# jmeter - Java Components ( Not tested )
 RUN  PluginsManagerCMD.sh install jmeter-java
-# jmeter - LDAP Protocol Support
+# jmeter - LDAP Protocol Support ( Not tested )
 RUN  PluginsManagerCMD.sh install jmeter-ldap
 # jmeter - Mail/SMTP Support
 RUN  PluginsManagerCMD.sh install jmeter-mail
-# jmeter - MongoDB Support
+# jmeter - MongoDB Support (DEPRECATED)
 RUN  PluginsManagerCMD.sh install jmeter-mongodb
 # jmeter - OS Process Support
 RUN  PluginsManagerCMD.sh install jmeter-native
 # jmeter - TCP Protocol Support
 RUN  PluginsManagerCMD.sh install jmeter-tcp
-# jmeter - Various Core Components
+# jmeter - Various Core Components ( Not tested )
 RUN  PluginsManagerCMD.sh install jmeter-components
