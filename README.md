@@ -1,4 +1,4 @@
-# Jmeter-Testing with Docker
+# Jmeter-Testing with Docker (Distributed Testing)
 
 ---
 
